@@ -121,7 +121,11 @@ return {
       follow_current_file = true,
       hijack_netrw_behavior = "open_current",
       use_libuv_file_watcher = true,
+      commands = global_commands,
     },
+    buffers = { commands = global_commands },
+    git_status = { commands = global_commands },
+    diagnostics = { commands = global_commands },
     event_handlers = {
       {
         event = "neo_tree_buffer_enter",
